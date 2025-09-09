@@ -1,0 +1,363 @@
+/* ---------- Color palette (easy to change) ---------- */
+:root {
+  --primary: #0d6efd; /* primary (buttons, accents) */
+  --secondary: #0b5ed7; /* darker primary */
+  --accent: #f59e0b; /* accent (badges) */
+  --bg: #f7f9fc; /* page background */
+  --card: #ffffff; /* card background */
+  --muted: #6b7280; /* muted text */
+  --max-width: 1100px;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+/* ---------- Page basics ---------- */
+html {
+  scroll-behavior: smooth;
+} /* smooth scrolling without JS */
+body {
+  background: var(--bg);
+  color: #0f172a;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+}
+.container {
+  width: min(94%, var(--max-width));
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+/* ---------- Header / Nav ---------- */
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+  z-index: 40;
+}
+.nav-inner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: min(94%, var(--max-width));
+  margin: 0 auto;
+  padding: 12px 0;
+}
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  opacity: 0.9;
+}
+nav a:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 44px 0;
+}
+.hero-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.95)
+  );
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+.hero-top {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.role {
+  color: var(--muted);
+  margin-top: 6px;
+  font-weight: 600;
+}
+.bio {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(13, 110, 253, 0.12);
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid rgba(13, 110, 253, 0.12);
+  box-shadow: none;
+  font-weight: 700;
+}
+
+/* ---------- Main grid: About / Skills / Projects ---------- */
+main {
+  margin-top: 22px;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1fr;
+}
+
+/* About */
+.about,
+.skills,
+.projects,
+.contact {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.section-title h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+.skill {
+  border-radius: 10px;
+  padding: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 247, 0.9),
+    rgba(250, 250, 251, 0.9)
+  );
+  text-align: center;
+  font-weight: 700;
+}
+.skill small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+}
+.projects-grid .card-wide {
+  grid-column: 1 / 3;
+}
+.projects-grid .card-wide img {
+  max-height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid .card-wide {
+    grid-column: auto;
+  }
+  .projects-grid .card-wide img {
+    max-height: 140px;
+  }
+}
+
+.card {
+  background: transparent;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.08);
+}
+.card h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+.card p {
+  margin: 0 0 10px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.tech-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.tech {
+  background: rgba(245, 245, 247, 0.9);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #111827;
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.icon-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Contact form (minimal JS) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  font-size: 15px;
+  resize: vertical;
+}
+textarea {
+  min-height: 120px;
+}
+.meta-contact {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: var(--muted);
+}
+
+/* Footer */
+footer {
+  margin-top: 18px;
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- Responsive adjustments ---------- */
+@media (min-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr 420px;
+  }
+  .hero-card {
+    padding: 28px;
+  }
+  main {
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+    gap: 22px;
+  }
+  .projects {
+    grid-column: 1 / 2;
+  }
+  .skills,
+  .contact {
+    grid-column: 2 / 3;
+  }
+}
+
+/* small screens: keep everything stacked and simple */
+@media (max-width: 450px) {
+  .avatar {
+    width: 72px;
+    height: 72px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+}
