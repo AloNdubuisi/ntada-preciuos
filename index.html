@@ -1,266 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Ntada Precious - portfolio</title>
-    <!-- Customed Linked CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- ========== HEADER / NAV ========== -->
-    <header>
-      <div class="nav-inner">
-        <div class="brand" aria-label="brand">
-          <div class="logo">SABI</div>
-          <div>
-            <div style="font-size: 15px">
-              NTADA PRECIOUS
-              <small
-                style="display: block; color: var(--muted); font-weight: 700"
-                > NTADA PRECIOUS -A Web Designer</small
-              >
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ntada Precious - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ========== HEADER / NAV ========== -->
+  <header>
+    <div class="nav-inner">
+      <!-- Brand -->
+      <div class="brand" aria-label="brand">
+        <div class="logo">SABI</div>
+        <div>
+          <div class="brand-text">
+            NTADA PRECIOUS
+            <small>NTADA PRECIOUS - A Web Designer</small>
           </div>
         </div>
-
-        <nav aria-label="main navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
       </div>
-    </header>
 
-    <div class="container">
-      <!-- ========== HERO / INTRO ========== -->
-      <section id="home" class="hero">
-        <!-- Left: Intro + CTA -->
-        <div class="hero-card" role="region" aria-labelledby="hero-title">
-          <div class="hero-top">
-            <div class="avatar" aria-hidden="true">
-              <img
-                style="width: 200px; height: 200px; border-radius: 15px"
-                src="p6.PNG"
-                alt="My Picture"
-              />
-            </div>
-            <div>
-              <h1 id="hero-title">NTADA PRECIOUS</h1>
-              <div class="role">Web Designer</div>
-              <div class="bio">
-               i love coding with my friends,playing games,styling with css and Coding 
-              </div>
-            </div>
+      <!-- Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+
+      <!-- Navigation -->
+      <nav id="nav-menu" aria-label="main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO / INTRO ========== -->
+  <div class="container">
+    <section id="home" class="hero">
+      <!-- Left: Intro + CTA -->
+      <div class="hero-card" role="region" aria-labelledby="hero-title">
+        <div class="hero-top">
+          <div class="avatar">
+            <img src="p6.PNG" alt="Ntada Precious" />
           </div>
-
-          <div class="cta-row">
-            <a class="btn" href="#projects">View My Work</a>
-            <a class="btn secondary" href="#contact">Contact Me</a>
-          </div>
-
-          <div style="margin-top: 12px; color: var(--muted); font-size: 14px">
-            <strong>Email:</strong>
-            <a href="mailto:youremail@example.com">preciousntada@precious.com</a
-            ><br />
-            <strong>Address:</strong> Akure, Nigeria
+          <div>
+            <h1 id="hero-title">NTADA PRECIOUS</h1>
+            <div class="role">Web Designer</div>
+            <div class="bio">
+              I love coding with my friends, playing games, styling with CSS, and coding.
+            </div>
           </div>
         </div>
 
-        <!-- Right: Quick profile / links -->
-        <aside style="display: flex; flex-direction: column; gap: 12px">
-          <div class="about" id="about">
-            <div class="section-title"><h2>About Me</h2></div>
-            <p style="color: var(--muted); margin: 0">
-              Hi — I'm Ntada Precious. I'm learning Web Design and improving my
-              computer use skills. I enjoy building small projects like portfolio
-              html and css.
-            </p>
-          </div>
+        <div class="cta-row">
+          <a class="btn" href="#projects">View My Work</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
 
-          <div class="about">
-            <div class="section-title"><h2>Quick Links</h2></div>
-            <div style="display: flex; flex-direction: column; gap: 8px">
-              <a
-                class="icon-link"
-                href="https://www.fiverr.com/Ade_Gboyega"
-                target="_blank"
-                rel="noopener"
-                >Fiverr profile</a
-              >
-              <a
-               class="icon-link"
-                href="https://github.com/Ade_Gboyega"
-                target="_blank"
-                rel="noopener"
-                >GitHub</a
-              >
-              <a
-                class="icon-link"
-                href="#"
-                onclick="alert('Add your LinkedIn URL in the HTML file to make this link work.')"
-                >LinkedIn</a
-              >
-            </div>
+        <div class="contact-info">
+          <strong>Email:</strong>
+          <a href="mailto:preciousntada@precious.com">preciousntada@precious.com</a><br />
+          <strong>Address:</strong> Akure, Nigeria
+        </div>
+      </div>
+
+      <!-- Right: About + Quick Links -->
+      <aside>
+        <div class="about" id="about">
+          <div class="section-title"><h2>About Me</h2></div>
+          <p>
+            Hi — I'm Ntada Precious. I'm learning Web Design and improving my
+            computer use skills. I enjoy building small projects like portfolio
+            HTML and CSS.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ========== MAIN ========== -->
+    <main>
+      <!-- Projects -->
+      <section class="projects" id="projects">
+        <div class="section-title"><h2>Projects</h2></div>
+        <div class="projects-grid">
+          <div class="card">
+            <img src="example.jpg" alt="Project 1" />
+            <h3>Portfolio Website</h3>
           </div>
-        </aside>
+          <div class="card">
+            <img src="file.jpeg" alt="Project 2" />
+            <h3>Landing Page</h3>
+          </div>
+          <div class="card card-wide">
+            <img src="Y.JPEG" alt="Project 3" />
+            <h3>Art Gallery</h3>
+          </div>
+        </div>
       </section>
 
-      <!-- ========== MAIN ========== -->
-      <main>
-        <!-- Projects (left column on wide screens) -->
-        <section class="projects" id="projects">
-          <div class="section-title">
-            <h2>Projects</h2>
-          </div>
-          <div class="projects-grid">
-            <div class="card">
-              <img
-                src="example.jpg
-              "
-                alt="Project 1"
-                style="
-                  width: 100%;
-                  border-radius: 8px 8px 0 0;
-                  object-fit: cover;
-                  max-height: 140px;
-                "
-              />
-              <h3>Portfolio Website</h3>
-            </div>
-            <div class="card">
-              <img
-                src="file.jpeg"
-                alt="Project 2"
-                style="
-                  width: 100%;
-                  border-radius: 8px 8px 0 0;
-                  object-fit: cover;
-                  max-height: 140px;
-                "
-              />
-              <h3>Landing Page</h3>
-            </div>
-            <div class="card card-wide">
-              <img
-                src="Y.JPEG"
-                alt="Project 3"
-                style="
-                  width: 100%;
-                  border-radius: 8px 8px 0 0;
-                  object-fit: cover;
-                  max-height: 140px;
-                "
-              />
-              <h3>ART GALLARY</h3>
-            </div>
+      <!-- Right column: skills + contact -->
+      <aside class="side-sections">
+        <!-- Skills -->
+        <section class="skills" id="skills">
+          <div class="section-title"><h2>Skills & Tools</h2></div>
+          <div class="skills-grid">
+            <div class="skill">Use of Computer</div>
+            <div class="skill">HTML <small>Structure</small></div>
+            <div class="skill">CSS <small>Styling</small></div>
+            <div class="skill">Python</div>
           </div>
         </section>
 
-        <!-- Right column: skills + contact -->
-        <aside
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 18px;
-          "
-        >
-          <!-- Skills -->
-          <section class="skills" id="skills" aria-labelledby="skills-title">
-            <div class="section-title">
-              <h2 id="skills-title">Skills & Tools</h2>
+        <!-- Contact -->
+        <section class="contact" id="contact">
+          <div class="section-title"><h2>Contact</h2></div>
+          <form id="contactForm" onsubmit="return sendEmail(event);">
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <div class="form-actions">
+              <button class="btn" type="submit">Send Message</button>
+              <button class="btn secondary" type="reset">Reset</button>
             </div>
-            <div class="skills-grid">
-              <div class="skill">Use of Computer <small></small></div>
-              <div class="skill">HTML <small>Structure</small></div>
-              <div class="skill">CSS <small>Styling</small></div>
-              <div class="skill">Python <small></small></div>
-            </div>
-          </section>
+          </form>
+        </section>
+      </aside>
+    </main>
 
-          <!-- Contact -->
-          <section class="contact" id="contact" aria-labelledby="contact-title">
-            <div class="section-title"><h2 id="contact-title">Contact</h2></div>
+    <!-- Footer -->
+    <footer>
+      <div>
+        © SABI Programmers — <span id="year"></span>. Built with simple HTML,
+        CSS & small JS for kids to edit.
+      </div>
+      <div class="back-to-top">
+        <a href="#home" class="icon-link">Back to top</a>
+      </div>
+    </footer>
+  </div>
 
-            <form id="contactForm" onsubmit="return sendEmail(event);">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                required
-              />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your email"
-                required
-              />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your message"
-                required
-              ></textarea>
+  <!-- ---------- JavaScript ---------- -->
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-              <div style="display: flex; gap: 10px">
-                <button class="btn" type="submit">Send message</button>
-                <button type="reset" class="btn secondary">Reset</button>
-              </div>
-            </form>
-          </section>
-          <section></section>
-        </aside>
-      </main>
+    // Auto-update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-      <!-- Footer -->
-      <footer>
-        <div>
-          © SABI Programmers — <span id="year"></span>. Built with simple HTML,
-          CSS & small JS for kids to edit.
-        </div>
-        <div style="margin-top: 8px">
-          <a href="#home" class="icon-link">Back to top</a>
-        </div>
-      </footer>
-    </div>
+    // Contact form mailto
+    function sendEmail(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-    <!-- ---------- Minimal JS (easy to edit) ---------- -->
-    <script>
-      // Auto-update footer year
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Very small contact handler:
-      // This opens the user's email client (mailto) with the form data.
-      // It's safe for beginners and requires no server.
-      function sendEmail(e) {
-        e.preventDefault();
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        // Validate minimal content
-        if (!name || !email || !message) {
-          alert("Please fill all fields.");
-          return false;
-        }
-
-        // Build mailto - note: long messages may be truncated by mail clients.
-        const subject = encodeURIComponent("Portfolio contact from " + name);
-        const body = encodeURIComponent(
-          "Name: " + name + "\\n" + "Email: " + email + "\\n\\n" + message
-        );
-
-        // Replace the email below with your real contact address if desired.
-        const mailTo = "ade_gboyega@example.com"; // change this to your real email
-        window.location.href =
-          "mailto:" + mailTo + "?subject=" + subject + "&body=" + body;
+      if (!name || !email || !message) {
+        alert("Please fill all fields.");
         return false;
       }
-    </script>
-  </body>
+
+      const subject = encodeURIComponent("Portfolio contact from " + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      const mailTo = "ade_gboyega@example.com"; // Change this to your real email
+      window.location.href = `mailto:${mailTo}?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
 </html>
